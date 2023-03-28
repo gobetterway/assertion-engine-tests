@@ -1,0 +1,30 @@
+{
+  "name": "assertion-engine-tests",
+  "version": "1.0.0",
+  "description": "A quick and dirty test of various assertion libraries…",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --parallel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gobetterway/assertion-engine-tests.git"
+  },
+  "author": "Jean-cédric Thérond <jean.cedric.t@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gobetterway/assertion-engine-tests/issues"
+  },
+  "homepage": "https://github.com/gobetterway/assertion-engine-tests#readme",
+  "devDependencies": {
+    "@stackbuilders/assertive-ts": "1.2.0",
+    "@types/chai": "4.3.4",
+    "@types/mocha": "10.0.1",
+    "chai": "4.3.7",
+    "earljs": "0.2.3",
+    "mocha": "10.2.0",
+    "ts-node": "10.9.1",
+    "typed-assert": "1.0.9",
+    "typescript": "5.0.2"
+  }
+}
