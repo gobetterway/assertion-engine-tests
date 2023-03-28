@@ -1,0 +1,180 @@
+
+> assertion-engine-tests@1.0.0 test
+> mocha --parallel
+
+
+
+  Simple tests
+    1) sums numbers fail | Earl
+    2) sums numbers fail | Assertive-TS
+    3) sums numbers fail | Typed Assert
+    4) sums numbers fail | chai Expect
+    5) sums numbers fail | chai Assert
+    6) sums numbers fail | chai Should
+
+  Tests using matrices
+    7) sums numbers via matrices | Earl
+    8) sums numbers via matrices | Assertive-TS
+    9) sums numbers via matrices | Typed Assert
+    10) sums numbers via matrices | chai Expect
+    11) sums numbers via matrices | chai Assert
+    12) sums numbers via matrices | chai Should
+
+
+  0 passing (402ms)
+  12 failing
+
+  1) Simple tests
+       sums numbers fail | Earl:
+
+      AssertionError: 15 not equal to 16
+      + expected - actual
+
+      -15
+      +16
+
+      at Context.<anonymous> (test/sum.test.ts:22:24)
+
+  2) Simple tests
+       sums numbers fail | Assertive-TS:
+
+      AssertionError [ERR_ASSERTION]: Expected both values to be deep equal
+      + expected - actual
+
+      -15
+      +16
+
+      at new AssertionError (node:internal/assert/assertion_error:452:5)
+      at NumberAssertion.toBeEqual (node_modules/@stackbuilders/assertive-ts/src/lib/Assertion.ts:283:19)
+      at Context.<anonymous> (test/sum.test.ts:26:29)
+
+  3) Simple tests
+       sums numbers fail | Typed Assert:
+     TypeError: A nice Typed Assert test
+      at defaultAssert (node_modules/typed-assert/src/index.ts:18:11)
+      at assert (node_modules/typed-assert/src/index.ts:25:3)
+      at Object.isExactly (node_modules/typed-assert/src/index.ts:73:9)
+      at Context.<anonymous> (test/sum.test.ts:30:13)
+
+  4) Simple tests
+       sums numbers fail | chai Expect:
+
+      A nice chai expect
+      + expected - actual
+
+      -15
+      +16
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Context.<anonymous> (test/sum.test.ts:34:24)
+
+  5) Simple tests
+       sums numbers fail | chai Assert:
+
+      A nice chai assert test
+      + expected - actual
+
+      -15
+      +16
+
+      at Function.assert.equal (node_modules/chai/lib/chai/interface/assert.js:139:10)
+      at Context.<anonymous> (test/sum.test.ts:38:16)
+
+  6) Simple tests
+       sums numbers fail | chai Should:
+
+      A nice chai should test
+      + expected - actual
+
+      -15
+      +16
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Context.<anonymous> (test/sum.test.ts:42:19)
+
+  7) Tests using matrices
+       sums numbers via matrices | Earl:
+
+      AssertionError: 15 not equal to 16
+      + expected - actual
+
+      -15
+      +16
+
+      at assertion-engine-tests/test/sum.test.ts:56:80
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:56:18)
+
+  8) Tests using matrices
+       sums numbers via matrices | Assertive-TS:
+
+      AssertionError [ERR_ASSERTION]: Expected both values to be deep equal
+      + expected - actual
+
+      -15
+      +16
+
+      at new AssertionError (node:internal/assert/assertion_error:452:5)
+      at NumberAssertion.toBeEqual (node_modules/@stackbuilders/assertive-ts/src/lib/Assertion.ts:283:19)
+      at assertion-engine-tests/test/sum.test.ts:60:85
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:60:18)
+
+  9) Tests using matrices
+       sums numbers via matrices | Typed Assert:
+     TypeError: expected to be exactly 16
+      at defaultAssert (node_modules/typed-assert/src/index.ts:18:11)
+      at assert (node_modules/typed-assert/src/index.ts:25:3)
+      at Object.isExactly (node_modules/typed-assert/src/index.ts:73:9)
+      at assertion-engine-tests/test/sum.test.ts:64:39
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:64:18)
+
+  10) Tests using matrices
+       sums numbers via matrices | chai Expect:
+
+      AssertionError: expected 15 to equal 16
+      + expected - actual
+
+      -15
+      +16
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at String.<anonymous> (test/sum.test.ts:68:80)
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:68:18)
+
+  11) Tests using matrices
+       sums numbers via matrices | chai Assert:
+
+      AssertionError: expected 15 to equal 16
+      + expected - actual
+
+      -15
+      +16
+
+      at Function.assert.equal (node_modules/chai/lib/chai/interface/assert.js:139:10)
+      at String.<anonymous> (test/sum.test.ts:72:42)
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:72:18)
+
+  12) Tests using matrices
+       sums numbers via matrices | chai Should:
+
+      AssertionError: expected 15 to equal 16
+      + expected - actual
+
+      -15
+      +16
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at String.<anonymous> (test/sum.test.ts:76:75)
+      at Array.forEach (<anonymous>)
+      at Context.<anonymous> (test/sum.test.ts:76:18)
+
+
+
