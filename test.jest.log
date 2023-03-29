@@ -1,0 +1,344 @@
+ts-jest[versions] (WARN) Version 5.0.2 of typescript installed has not been tested with ts-jest. If you're experiencing issues, consider using a supported version (>=4.3.0 <5.0.0-0). Please do not report issues in ts-jest if you are using unsupported versions.
+FAIL test/sum.test.ts
+  Simple tests
+    ✕ sums numbers fail | Earl (6 ms)
+    ✕ sums numbers fail | Assertive-TS (8 ms)
+    ✕ sums numbers fail | Typed Assert (1 ms)
+    ✕ sums numbers fail | Chai Expect
+    ✕ sums numbers fail | Chai Assert (1 ms)
+    ✕ sums numbers fail | Chai Should
+    ✕ sums numbers fail | Jest (3 ms)
+  Tests using matrices 
+    ✕ sums numbers via matrices | Earl (1 ms)
+    ✕ sums numbers via matrices | Assertive-TS (2 ms)
+    ✕ sums numbers via matrices | Typed Assert
+    ✕ sums numbers via matrices | chai Expect
+    ✕ sums numbers via matrices | chai Assert
+    ✕ sums numbers via matrices | chai Should
+    ✕ sums numbers via matrices | Jest (1 ms)
+
+  ● Simple tests › sums numbers fail | Earl
+
+    Expected value   "16"
+    Received:
+      "15"
+
+    Message:
+      15 not equal to 16
+
+    Difference:
+
+    - Expected
+    + Received
+
+    - 16
+    + 15
+
+      21 |
+      22 |   it('sums numbers fail | Earl', () => {
+    > 23 |     earlExpect(actual).toEqual(FAILING_VAR)
+         |                        ^
+      24 |   })
+      25 |
+      26 |   it('sums numbers fail | Assertive-TS', () => {
+
+      at Object.<anonymous> (test/sum.test.ts:23:24)
+
+  ● Simple tests › sums numbers fail | Assertive-TS
+
+    Expected value   16
+    Received:
+      15
+
+    Message:
+      Expected both values to be deep equal
+        at new
+
+      25 |
+      26 |   it('sums numbers fail | Assertive-TS', () => {
+    > 27 |     assertiveExpect(actual).toBeEqual(FAILING_VAR)
+         |                             ^
+      28 |   })
+      29 |
+      30 |   it('sums numbers fail | Typed Assert', () => {
+
+      at NumberAssertion.toBeEqual (node_modules/@stackbuilders/assertive-ts/src/lib/Assertion.ts:283:19)
+      at Object.<anonymous> (test/sum.test.ts:27:29)
+
+  ● Simple tests › sums numbers fail | Typed Assert
+
+    TypeError: A nice Typed Assert test
+
+      29 |
+      30 |   it('sums numbers fail | Typed Assert', () => {
+    > 31 |     tassert.isExactly(actual, FAILING_VAR, 'A nice Typed Assert test')
+         |             ^
+      32 |   })
+      33 |
+      34 |   it('sums numbers fail | Chai Expect', () => {
+
+      at defaultAssert (node_modules/typed-assert/src/index.ts:18:11)
+      at assert (node_modules/typed-assert/src/index.ts:25:3)
+      at Object.isExactly (node_modules/typed-assert/src/index.ts:73:9)
+      at Object.<anonymous> (test/sum.test.ts:31:13)
+
+  ● Simple tests › sums numbers fail | Chai Expect
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      A nice chai expect: expected 15 to equal 16
+
+      33 |
+      34 |   it('sums numbers fail | Chai Expect', () => {
+    > 35 |     chaiExpect(actual).equal(FAILING_VAR, 'A nice chai expect')
+         |                        ^
+      36 |   })
+      37 |
+      38 |   it('sums numbers fail | Chai Assert', () => {
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Object.<anonymous> (test/sum.test.ts:35:24)
+
+  ● Simple tests › sums numbers fail | Chai Assert
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      A nice chai assert test: expected 15 to equal 16
+
+      37 |
+      38 |   it('sums numbers fail | Chai Assert', () => {
+    > 39 |     chaiAssert.equal(actual, FAILING_VAR, 'A nice chai assert test')
+         |                ^
+      40 |   })
+      41 |
+      42 |   it('sums numbers fail | Chai Should', () => {
+
+      at Function.assert.equal (node_modules/chai/lib/chai/interface/assert.js:139:10)
+      at Object.<anonymous> (test/sum.test.ts:39:16)
+
+  ● Simple tests › sums numbers fail | Chai Should
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      A nice chai should test: expected 15 to equal 16
+
+      41 |
+      42 |   it('sums numbers fail | Chai Should', () => {
+    > 43 |     actual.should.equal(FAILING_VAR, 'A nice chai should test')
+         |                   ^
+      44 |   })
+      45 |
+      46 |   it('sums numbers fail | Jest', () => {
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Object.<anonymous> (test/sum.test.ts:43:19)
+
+  ● Simple tests › sums numbers fail | Jest
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 15
+
+      45 |
+      46 |   it('sums numbers fail | Jest', () => {
+    > 47 |     jestExpect(actual).toBe(FAILING_VAR)
+         |                        ^
+      48 |   })
+      49 |
+      50 | })
+
+      at Object.<anonymous> (test/sum.test.ts:47:24)
+
+  ● Tests using matrices  › sums numbers via matrices | Earl
+
+    Expected value   "16"
+    Received:
+      "15"
+
+    Message:
+      15 not equal to 16
+
+    Difference:
+
+    - Expected
+    + Received
+
+    - 16
+    + 15
+
+      61 |
+      62 |   it('sums numbers via matrices | Earl', () => {
+    > 63 |     test_matrice.forEach(t => earlExpect(sum.apply(undefined, t.slice(0, -1))).toEqual(t.slice(-1)[0]));
+         |                                                                                ^
+      64 |   })
+      65 |
+      66 |   it('sums numbers via matrices | Assertive-TS', () => {
+
+      at test/sum.test.ts:63:80
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:63:18)
+
+  ● Tests using matrices  › sums numbers via matrices | Assertive-TS
+
+    Expected value   16
+    Received:
+      15
+
+    Message:
+      Expected both values to be deep equal
+        at new
+
+      65 |
+      66 |   it('sums numbers via matrices | Assertive-TS', () => {
+    > 67 |     test_matrice.forEach(t => assertiveExpect(sum.apply(undefined, t.slice(0, -1))).toBeEqual(t.slice(-1)[0]));
+         |                                                                                     ^
+      68 |   })
+      69 |
+      70 |   it('sums numbers via matrices | Typed Assert', () => {
+
+      at NumberAssertion.toBeEqual (node_modules/@stackbuilders/assertive-ts/src/lib/Assertion.ts:283:19)
+      at test/sum.test.ts:67:85
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:67:18)
+
+  ● Tests using matrices  › sums numbers via matrices | Typed Assert
+
+    TypeError: expected to be exactly 16
+
+      69 |
+      70 |   it('sums numbers via matrices | Typed Assert', () => {
+    > 71 |     test_matrice.forEach(t => tassert.isExactly(sum.apply(undefined, t.slice(0, -1)), t.slice(-1)[0]));
+         |                                       ^
+      72 |   })
+      73 |
+      74 |   it('sums numbers via matrices | chai Expect', () => {
+
+      at defaultAssert (node_modules/typed-assert/src/index.ts:18:11)
+      at assert (node_modules/typed-assert/src/index.ts:25:3)
+      at Object.isExactly (node_modules/typed-assert/src/index.ts:73:9)
+      at test/sum.test.ts:71:39
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:71:18)
+
+  ● Tests using matrices  › sums numbers via matrices | chai Expect
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      | sum(1, 2, 4, 8) → 16 | In Chai Expect via a matrix, line 1: expected 15 to equal 16
+
+      73 |
+      74 |   it('sums numbers via matrices | chai Expect', () => {
+    > 75 |     test_matrice.forEach((t, i) => chaiExpect(sum.apply(undefined, t.slice(0, -1))).equal(t.slice(-1)[0], messageTemplate({ params: t.slice(0, -1), result: t.slice(-1)[0], comments: `In Chai Expect via a matrix, line ${i}` })));
+         |                                                                                     ^
+      76 |   })
+      77 |
+      78 |   it('sums numbers via matrices | chai Assert', () => {
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at test/sum.test.ts:75:85
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:75:18)
+
+  ● Tests using matrices  › sums numbers via matrices | chai Assert
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      | sum(1, 2, 4, 8) → 16 | In Chai Expect via a matrix, line 1: expected 15 to equal 16
+
+      77 |
+      78 |   it('sums numbers via matrices | chai Assert', () => {
+    > 79 |     test_matrice.forEach((t, i) => chaiAssert.equal(sum.apply(undefined, t.slice(0, -1)), t.slice(-1)[0], messageTemplate({ params: t.slice(0, -1), result: t.slice(-1)[0], comments: `In Chai Expect via a matrix, line ${i}` })));
+         |                                               ^
+      80 |   })
+      81 |
+      82 |   it('sums numbers via matrices | chai Should', () => {
+
+      at Function.assert.equal (node_modules/chai/lib/chai/interface/assert.js:139:10)
+      at test/sum.test.ts:79:47
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:79:18)
+
+  ● Tests using matrices  › sums numbers via matrices | chai Should
+
+    assert.strictEqual(received, expected)
+
+    Expected value to strictly be equal to:
+      16
+    Received:
+      15
+
+    Message:
+      | sum(1, 2, 4, 8) → 16 | In Chai Expect via a matrix, line 1: expected 15 to equal 16
+
+      81 |
+      82 |   it('sums numbers via matrices | chai Should', () => {
+    > 83 |     test_matrice.forEach((t, i) => sum.apply(undefined, t.slice(0, -1)).should.equal(t.slice(-1)[0], messageTemplate({ params: t.slice(0, -1), result: t.slice(-1)[0], comments: `In Chai Expect via a matrix, line ${i}` })));
+         |                                                                                ^
+      84 |   })
+      85 |
+      86 |   it('sums numbers via matrices | Jest', () => {
+
+      at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1038:12)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at test/sum.test.ts:83:80
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:83:18)
+
+  ● Tests using matrices  › sums numbers via matrices | Jest
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 16
+    Received: 15
+
+      85 |
+      86 |   it('sums numbers via matrices | Jest', () => {
+    > 87 |     test_matrice.forEach(t => jestExpect(sum.apply(undefined, t.slice(0, -1))).toBe(t.slice(-1)[0]));
+         |                                                                                ^
+      88 |   })
+      89 |
+      90 | })
+
+      at test/sum.test.ts:87:80
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (test/sum.test.ts:87:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       14 failed, 14 total
+Snapshots:   0 total
+Time:        1.397 s
+Ran all test suites.
